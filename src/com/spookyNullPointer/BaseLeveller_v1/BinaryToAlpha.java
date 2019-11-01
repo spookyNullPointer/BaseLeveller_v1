@@ -33,12 +33,12 @@ class BinaryToAlpha {
         }
     }
 
-    private String binaryToLetter(String binaryString, boolean returnLetter){
+    private String binaryToLetter(String binaryLetter, boolean returnLetter){
 
         String letter = "@";
         String asciiValue = "064";
         for(int x = 0; x < letterDetsArray.length; x++){
-            if(letterDetsArray[x].getBinary().equals(binaryString)){
+            if(letterDetsArray[x].getBinary().equals(binaryLetter)){
                 letter = letterDetsArray[x].getLetter();
             }
         }
@@ -47,11 +47,22 @@ class BinaryToAlpha {
         } else { return asciiValue; }
     }
 
-    public String getResultLetter(){
+    public String getResultAlpha(){
         return binaryToLetter(input, true);
     }
 
     public String getResultASCII(){
         return binaryToLetter(input, false);
+    }
+
+    private String[] binaryToString(String binaryString){
+
+        String[] outputStringArray = new String[binaryString.length()];
+
+        for(int x = 0; x < outputStringArray.length; x++){
+            outputStringArray[x] =
+        }
+
+        return outputStringArray;
     }
 }

@@ -44,12 +44,15 @@ public class Main {
     }
 
     private int getMenuInput(){
+        printHeading();
         sysPrint("Welcome to BaseLeveller");
         sysPrint("Please select conversion you'd like to carry out: ");
         sysPrint("Option 1: Binary To Decimal");
         sysPrint("Option 2: Decimal To Binary UNAVAILABLE");
         sysPrint("Option 3: Binary To Text");
-        sysPrint("Option 4: Text To Binary");
+        sysPrint("Option 4: Text To Binary UNAVAILABLE");
+        sysPrint("Option 5: Binary to ASCII UNAVAILABLE");
+        sysPrint("Option 6: ASCII to Binary UNAVAILABLE");
         System.out.print("Input Choice: ");
         userInput = new Scanner(System.in);
         int menuChoice = userInput.nextInt();
@@ -148,6 +151,16 @@ public class Main {
 
     private void sysPrint(String toPrint){
         System.out.println(toPrint);
+    }
+
+    private void printHeading(){
+        sysPrint("  ____                   _                    _ _           ");
+        sysPrint(" |  _ \\                 | |                  | | |          ");
+        sysPrint(" | |_) | __ _ ___  ___  | |     _____   _____| | | ___ _ __ ");
+        sysPrint(" |  _ < / _` / __|/ _ \\ | |    / _ \\ \\ / / _ \\ | |/ _ \\ '__|");
+        sysPrint(" | |_) | (_| \\__ \\  __/ | |___|  __/\\ V /  __/ | |  __/ |   ");
+        sysPrint(" |____/ \\__,_|___/\\___| |______\\___| \\_/ \\___|_|_|\\___|_|  ");
+        sysPrint("                                       By spookyNullPointer");
     }
 
     private void convertBinaryToDecimal(String userInputString){

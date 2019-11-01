@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c0c06087-3f26-42f5-8d3d-1680432be4b5" name="Default Changelist" comment="Initial commit.&#10;Restructured project.">
+    <list default="true" id="c0c06087-3f26-42f5-8d3d-1680432be4b5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/spookyNullPointer/BaseLeveller_v1/BinaryToAlpha.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/spookyNullPointer/BaseLeveller_v1/BinaryToAlpha.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/spookyNullPointer/BaseLeveller_v1/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/spookyNullPointer/BaseLeveller_v1/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/com/spookyNullPointer/BaseLeveller_v1/BinaryToAlphaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/com/spookyNullPointer/BaseLeveller_v1/BinaryToAlphaTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/com/spookyNullPointer/BaseLeveller_v1/BinaryToDecimalTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/com/spookyNullPointer/BaseLeveller_v1/BinaryToDecimalTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -17,17 +20,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/spookyNullPointer/BaseLeveller_v1/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1598">
-              <caret line="94" column="75" selection-start-line="94" selection-start-column="75" selection-end-line="94" selection-end-column="75" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/spookyNullPointer/BaseLeveller_v1/LetterDets.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" selection-start-line="27" selection-end-line="27" />
+            <state relative-caret-position="595">
+              <caret line="56" column="43" lean-forward="true" selection-start-line="56" selection-start-column="43" selection-end-line="56" selection-end-column="43" />
+              <folding>
+                <element signature="method#sysPrint#0;class#Main#0" />
+                <element signature="method#printHeading#0;class#Main#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -44,26 +42,38 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/spookyNullPointer/BaseLeveller_v1/BinaryToAlpha.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-51">
-              <caret line="15" column="8" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="82" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tests/com/spookyNullPointer/BaseLeveller_v1/BinaryToDecimalTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="146">
+              <caret line="49" column="32" selection-start-line="49" selection-start-column="32" selection-end-line="49" selection-end-column="32" />
+              <folding>
+                <element signature="method#createLetterDetsArray#0;class#BinaryToAlpha#0" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/com/spookyNullPointer/BaseLeveller_v1/BinaryToDecimalTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/com/spookyNullPointer/BaseLeveller_v1/BinaryToAlphaTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="98" />
+            <state relative-caret-position="367">
+              <caret line="78" column="79" selection-start-line="78" selection-start-column="79" selection-end-line="78" selection-end-column="79" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/spookyNullPointer/BaseLeveller_v1/LetterDets.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="27" selection-start-line="27" selection-end-line="27" />
             </state>
           </provider>
         </entry>
@@ -86,10 +96,10 @@
       <list>
         <option value="$PROJECT_DIR$/src/com/spookyNullPointer/BaseLeveller_v1/LetterDets.java" />
         <option value="$PROJECT_DIR$/src/com/spookyNullPointer/BaseLeveller_v1/BinaryToDecimal.java" />
-        <option value="$PROJECT_DIR$/src/com/spookyNullPointer/BaseLeveller_v1/BinaryToAlpha.java" />
-        <option value="$PROJECT_DIR$/src/com/spookyNullPointer/BaseLeveller_v1/Main.java" />
-        <option value="$PROJECT_DIR$/tests/com/spookyNullPointer/BaseLeveller_v1/BinaryToAlphaTest.java" />
         <option value="$PROJECT_DIR$/tests/com/spookyNullPointer/BaseLeveller_v1/BinaryToDecimalTest.java" />
+        <option value="$PROJECT_DIR$/src/com/spookyNullPointer/BaseLeveller_v1/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/spookyNullPointer/BaseLeveller_v1/BinaryToAlpha.java" />
+        <option value="$PROJECT_DIR$/tests/com/spookyNullPointer/BaseLeveller_v1/BinaryToAlphaTest.java" />
       </list>
     </option>
   </component>
@@ -126,7 +136,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572484058740" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572641628576" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="project.structure.last.edited" value="Project" />
@@ -153,7 +163,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.BinaryToDecimalTest.testBoundary">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.spookyNullPointer.BaseLeveller_v1.Main" />
       <module name="BaseLeveller_v1" />
@@ -218,10 +228,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.BinaryToDecimalTest.testBoundary" />
         <item itemvalue="JUnit.BinaryToAlphaTest" />
         <item itemvalue="JUnit.BinaryToAlphaTest.testAlphaLower" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -235,7 +245,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1572480352421</updated>
-      <workItem from="1572480353946" duration="3560000" />
+      <workItem from="1572480353946" duration="7495000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit.&#10;Restructured project.">
       <created>1572483025547</created>
@@ -244,7 +254,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572483025547</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Initial commit.&#10;Restructured project.">
+      <created>1572484064538</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1572484064538</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -280,10 +297,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3560000" />
+    <option name="totallyTimeSpent" value="7495000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Image Layers" />
       <window_info id="Designer" />
@@ -324,24 +342,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="Initial commit.&#10;Restructured project." />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/spookyNullPointer/BaseLeveller_v1/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1598">
-          <caret line="94" column="75" selection-start-line="94" selection-start-column="75" selection-end-line="94" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/spookyNullPointer/BaseLeveller_v1/LetterDets.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="27" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/com/spookyNullPointer/BaseLeveller_v1/BinaryToAlphaTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="98" />
         </state>
       </provider>
     </entry>
@@ -352,17 +356,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/spookyNullPointer/BaseLeveller_v1/BinaryToAlpha.java">
+    <entry file="file://$PROJECT_DIR$/src/com/spookyNullPointer/BaseLeveller_v1/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-51">
-          <caret line="15" column="8" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="82" />
+        <state relative-caret-position="595">
+          <caret line="56" column="43" lean-forward="true" selection-start-line="56" selection-start-column="43" selection-end-line="56" selection-end-column="43" />
+          <folding>
+            <element signature="method#sysPrint#0;class#Main#0" />
+            <element signature="method#printHeading#0;class#Main#0" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/com/spookyNullPointer/BaseLeveller_v1/BinaryToDecimalTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="255">
+          <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/spookyNullPointer/BaseLeveller_v1/BinaryToAlpha.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="49" column="32" selection-start-line="49" selection-start-column="32" selection-end-line="49" selection-end-column="32" />
+          <folding>
+            <element signature="method#createLetterDetsArray#0;class#BinaryToAlpha#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/com/spookyNullPointer/BaseLeveller_v1/BinaryToAlphaTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="78" column="79" selection-start-line="78" selection-start-column="79" selection-end-line="78" selection-end-column="79" />
         </state>
       </provider>
     </entry>
