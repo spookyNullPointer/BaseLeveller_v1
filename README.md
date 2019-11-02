@@ -19,7 +19,6 @@ Currently in active development. Very limited functionality.
 
 TODO:
 
--  [] Maven Build File
 -  [] Acceptance Testing
 -  [] Complete Stated Features
 
