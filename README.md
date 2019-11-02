@@ -11,18 +11,18 @@ Functions include -
 - Binary to ASCII Number
 - ASCII Number to Binary
 
+![BaseLeveller_Screenshot](/Screenshot_1.png)
+
 ## Status
 
 Currently in active development. Very limited functionality.
 
 TODO:
 
-- Maven Build File
-- Acceptance Testing
-- Complete Stated Features
+-  [] Maven Build File
+-  [] Acceptance Testing
+-  [] Complete Stated Features
 
-
-//Screenshot
 
 # Purpose 
 
