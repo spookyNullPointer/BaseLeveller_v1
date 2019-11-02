@@ -2,10 +2,6 @@ package com.spookyNullPointer.BaseLeveller_v1;
 
 class BinaryToDecimal {
 
-    //TODO: Convert to 8 Bit Binary
-    //TODO: 128bit Array, Compare
-    //TODO: Sum of Binary
-
     char[] userInputInEightBit;
     int sumDecimalValues = 0;
     String input;

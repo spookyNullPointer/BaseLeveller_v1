@@ -8,13 +8,19 @@ public class Main {
     //TODO: DecimalToBinary
     //TODO: TextToBinary
 
+
     //TODO: HexToDecimal
     //TODO: DecimalToHex
+
+    //TODO: Globalise Min / Max Values
+    //TODO: Do another Conversion Loop / Exit
+
 
 
     int numberOfMenuChoices = 4;
     Scanner userInput;
     String userInputString;
+    int userInputInt;
     int incorrectInputCount = 0;
 
     Main(){
@@ -25,8 +31,8 @@ public class Main {
                 convertBinaryToDecimal(userInputString);
                 break;
             case 2:
-                System.out.println("UNAVAILABLE");
-                System.exit(-1);
+                getUserInputInt();
+                convertDecimalToBinary(userInputInt);
                 break;
             case 3:
                 getUserInputBinary(true);
@@ -44,7 +50,7 @@ public class Main {
         sysPrint("Welcome to BaseLeveller");
         sysPrint("Please select conversion you'd like to carry out: ");
         sysPrint("Option 1: Binary To Decimal");
-        sysPrint("Option 2: Decimal To Binary UNAVAILABLE");
+        sysPrint("Option 2: Decimal To Binary");
         sysPrint("Option 3: Binary To Text");
         sysPrint("Option 4: Text To Binary UNAVAILABLE");
         sysPrint("Option 5: Binary to ASCII UNAVAILABLE");
@@ -68,9 +74,9 @@ public class Main {
 
 
     private void getUserInputBinary(boolean isForLetterBinary) {
-        System.out.println("Debug: Enter UserInputBinary");
+        //System.out.println("Debug: Enter UserInputBinary");
         userInput = new Scanner(System.in);
-        System.out.println("69Input Binary To Convert: ");
+        System.out.println("Input Binary To Convert: ");
         userInputString = userInput.nextLine();
         if (!validateBinary(userInputString, isForLetterBinary) && incorrectInputCount <= 3) {
             getUserInputBinary(isForLetterBinary);
@@ -80,6 +86,34 @@ public class Main {
             sysPrint("exceedMaxUserInput");
             System.exit(-1);
         }
+    }
+
+    private void getUserInputInt(){
+        userInput = new Scanner(System.in);
+        System.out.println("Input Integer To Convert (0 to 255): ");
+        userInputInt = userInput.nextInt();
+        if(!validateInt(0, 255, userInputInt) && incorrectInputCount <= 3){
+            getUserInputInt();
+            incorrectInputCount++;
+        }
+        if(incorrectInputCount >= 3){
+            sysPrint("exceedMaxUserInput");
+            System.exit(-1);
+        }
+    }
+
+    private boolean validateInt(int min, int max, int userInputInt){
+
+        boolean isValid = true;
+        if(userInputInt > max){
+            errorPrinter("maxIntInput");
+            isValid = false;
+        }
+        else if(userInputInt < min){
+            errorPrinter("minIntInput");
+            isValid = false;
+        }
+        return isValid;
     }
 
     private boolean validateMenuChoice(int menuChoice){
@@ -142,6 +176,12 @@ public class Main {
             case "convertError":
                 sysPrint("Error: A conversion error occurred, try again");
                 break;
+            case "minIntInput":
+                sysPrint("Error: Min Value 0");
+                break;
+            case "maxIntInput":
+                sysPrint("Error:  Max Value 255");
+                break;
         }
     }
 
@@ -191,6 +231,21 @@ public class Main {
             sysPrint("Binary value: " + userInputString);
             sysPrint("Alphabetic value: " + binaryToAlpha.getResultAlpha());
         }
+    }
+
+    private void convertDecimalToBinary(int userInputInt){
+
+        if((userInputInt > 255) || (userInputInt < 0)){
+            errorPrinter("minMaxIntInput");
+            //TODO: Loop input
+            System.exit(-1);
+        }
+
+        DecimalToBinary decimalToBinary = new DecimalToBinary(userInputInt);
+        sysPrint("Binary value: " + userInputInt);
+        sysPrint("Alphabetic value: " + decimalToBinary.getResult());
+
+
     }
 
     public static void main(String[] args){
