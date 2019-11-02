@@ -5,12 +5,8 @@ import java.util.Scanner;
 public class Main {
 
     //TODO: Maven Build File
-    //TODO: JUnit Tests BinaryToDecimal
     //TODO: DecimalToBinary
     //TODO: TextToBinary
-
-    //TODO: BinaryToText - One Word
-    //TODO: BinaryToText - Multiple Words
 
     //TODO: HexToDecimal
     //TODO: DecimalToHex
@@ -186,14 +182,14 @@ public class Main {
         //TODO: Punctuation
         BinaryToAlpha binaryToAlpha = new BinaryToAlpha(userInputString);
 
-        if(binaryToAlpha.getResultLetter().equals("@")){
+        if(binaryToAlpha.getResultAlpha().equals("Error")){
             errorPrinter("convertError" + "2");
             incorrectInputCount = 0;
             getUserInputBinary(true);
         }
         else {
             sysPrint("Binary value: " + userInputString);
-            sysPrint("Alphabetic value: " + binaryToAlpha.getResultLetter());
+            sysPrint("Alphabetic value: " + binaryToAlpha.getResultAlpha());
         }
     }
 

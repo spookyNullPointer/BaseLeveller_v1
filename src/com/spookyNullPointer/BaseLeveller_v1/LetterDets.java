@@ -21,7 +21,5 @@ public class LetterDets {
         return binary;
     }
 
-    public void setLetter(){
-    }
 
 }
