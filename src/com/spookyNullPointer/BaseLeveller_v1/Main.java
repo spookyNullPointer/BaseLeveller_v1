@@ -2,8 +2,12 @@ package com.spookyNullPointer.BaseLeveller_v1;
 
 import java.util.Scanner;
 
-//TODO: TextToBinary
 //TODO: Do another Conversion Loop / Exit
+//TODO: Binary to Text can only do single letters (8 bits of Binary)
+//TODO: Errors don't re-start menu
+//TODO: Incorrect input loop doesn't work
+//TODO: Unable to paste into cmd, runs and errors
+//TODO: Input "-1" to return to menu
 
 class Main{
 
@@ -11,27 +15,33 @@ class Main{
     static final double VERSION = 1.0;
 
     //App Globals
+    String lastConversion;
     int numberOfMenuChoices = 4;
     Scanner userInput;
     String userInputString;
+    String userInputText;
     int userInputInt;
     int incorrectInputCount = 0;
 
     public Main(){
         switch(getMenuInput()){
             case 1:
+                lastConversion = "Binary to Decimal";
                 getUserInputBinary(false);
                 convertBinaryToDecimal();
                 break;
             case 2:
+                lastConversion = "Decimal to Binary";
                 getUserInputInt();
                 convertDecimalToBinary();
                 break;
             case 3:
+                lastConversion = "Binary to Text";
                 getUserInputBinary(true);
                 convertBinaryToText();
                 break;
             case 4:
+                lastConversion = "Text to Binary";
                 getUserInputText();
                 convertTextToBinary();
                 break;
@@ -45,7 +55,7 @@ class Main{
         sysPrint("Option 1: Binary To Decimal");
         sysPrint("Option 2: Decimal To Binary");
         sysPrint("Option 3: Binary To Text");
-        sysPrint("Option 4: Text To Binary UNAVAILABLE");
+        sysPrint("Option 4: Text To Binary");
         System.out.print("Input Choice: ");
         userInput = new Scanner(System.in);
         int menuChoice = userInput.nextInt();
@@ -58,13 +68,11 @@ class Main{
             sysPrint("exceedMaxUserInput");
             System.exit(-1);
         }
-
-        System.out.println("Debug: Menu Input :: " + menuChoice);
+        //System.out.println("Debug: Menu Input :: " + menuChoice);
         return menuChoice;
     }
 
     private void getUserInputBinary(boolean isForLetterBinary) {
-        //System.out.println("Debug: Enter UserInputBinary");
         userInput = new Scanner(System.in);
         System.out.println("Input Binary To Convert: ");
         userInputString = userInput.nextLine();
@@ -93,7 +101,17 @@ class Main{
     }
 
     private void getUserInputText(){
-
+        userInput = new Scanner(System.in);
+        System.out.println("Input Text: ");
+        userInputText = userInput.nextLine();
+        if(!validateText(userInputText) && incorrectInputCount <= 3){
+            getUserInputText();
+            incorrectInputCount++;
+        }
+        if(incorrectInputCount >= 3){
+            sysPrint("exceedMaxUserInput");
+            System.exit(-1);
+        }
     }
 
     private boolean validateInt(int min, int max, int userInputInt){
@@ -119,9 +137,18 @@ class Main{
         }
     }
 
-    private boolean validateText(){
+    private boolean validateText(String userInputText){
 
-        return false;
+        boolean isValid = false;
+        String acceptedValues = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ ";
+        for(int x = 0; x < userInputText.length(); x++){
+            for(int y = 0; y < acceptedValues.length(); y++) {
+                if(userInputText.charAt(x) == acceptedValues.charAt(x)){
+                    isValid = true;
+                }
+            }
+        }
+        return isValid;
     }
 
     private boolean validateBinary(String userInput, boolean letterBinary){
@@ -199,9 +226,8 @@ class Main{
     }
 
     private void convertBinaryToDecimal(){
-        System.out.println("Debug: Enter BinaryToDecimal");
-        BinaryToDecimal binaryToDecimal = new BinaryToDecimal(userInputString);
 
+        BinaryToDecimal binaryToDecimal = new BinaryToDecimal(userInputString);
         //Internal Error
         if(binaryToDecimal.getResult() == -1){
             errorPrinter("convertError" + "1");
@@ -210,25 +236,24 @@ class Main{
         }
         //Result of Conversion
         else if(binaryToDecimal.getResult() > -1){
-
             sysPrint("Binary value: " + userInputString);
             sysPrint("Decimal value: " + binaryToDecimal.getResult());
+            runAgain();
         }
     }
 
     private void convertBinaryToText(){
-        //TODO: Implement Space Search for Text
-        //TODO: Punctuation
-        BinaryToAlpha binaryToAlpha = new BinaryToAlpha(userInputString);
 
+        BinaryToAlpha binaryToAlpha = new BinaryToAlpha(userInputString);
         if(binaryToAlpha.getResultAlpha().equals("Error")){
-            errorPrinter("convertError" + "2");
+            errorPrinter("convertError");
             incorrectInputCount = 0;
             getUserInputBinary(true);
         }
         else {
             sysPrint("Binary value: " + userInputString);
             sysPrint("Alphabetic value: " + binaryToAlpha.getResultAlpha());
+            runAgain();
         }
     }
 
@@ -236,19 +261,55 @@ class Main{
 
         if((userInputInt > 255) || (userInputInt < 0)){
             errorPrinter("minMaxIntInput");
-            //TODO: Loop input
-            System.exit(-1);
+            incorrectInputCount = 0;
+            getUserInputBinary(false);
         }
-
         DecimalToBinary decimalToBinary = new DecimalToBinary(userInputInt);
         sysPrint("Binary value: " + userInputInt);
         sysPrint("Alphabetic value: " + decimalToBinary.getResult());
-
-
+        runAgain();
     }
 
     private void convertTextToBinary(){
+        AlphaToBinary alphaToBinary = new AlphaToBinary(userInputText);
+        if(alphaToBinary.getResult().equals("Error")){
+            errorPrinter("convertError");
+            incorrectInputCount = 0;
+            getUserInputText();
+        }
+        else {
+            sysPrint("Binary value: " + userInputString);
+            sysPrint("Alphabetic value: " + alphaToBinary.getResult());
+            runAgain();
+        }
+    }
 
+    private void runAgain(){
+        userInput = new Scanner(System.in);
+        sysPrint("Do Another " + lastConversion + "Conversion?");
+        sysPrint("Y / N");
+        String runAgainChoice = userInput.nextLine();
+        if(!runAgainUserInputValidate(runAgainChoice) && incorrectInputCount >= 3){
+            errorPrinter("invalidInput");
+            incorrectInputCount++;
+            runAgain();
+        }
+        else if(runAgainChoice.equals("Y") || runAgainChoice.equals("y") ){
+            incorrectInputCount = 0;
+            new Main();
+        }
+        else if(runAgainChoice.equals("N") || runAgainChoice.equals("n")){
+            sysPrint("Exiting Application...");
+            System.exit(-1);
+        }
+    }
+
+    private boolean runAgainUserInputValidate(String userInput){
+        boolean isValid = false;
+        if(userInput.equals("Y") || userInput.equals("N") || userInput.equals("n") || userInput.equals("y")){
+            isValid = true;
+        }
+        return isValid;
     }
 
     public static void main(String[] args){

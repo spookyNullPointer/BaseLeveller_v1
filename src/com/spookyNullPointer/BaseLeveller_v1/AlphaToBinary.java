@@ -12,15 +12,15 @@ class AlphaToBinary {
 
     private String[] letterToBinary(){
 
+        int counter = 0;
         String[] outputString = new String[input.length()];
-        for(int x = 0; x < input.length(); x++){
-            for(int y = 0; y < letterDetsArray.length; y++){
-                
-            }
-        }
-        for(int x = 0; x < input.length(); x++){
-            if(letterDetsArray[x].getLetter().equals(Character.toString(input.charAt(x)))){
-                outputString[x] = letterDetsArray[x].getBinary();
+        for(int x = 0; x < input.length(); x++) {
+            for (int y = 0; y < letterDetsArray.length; y++) {
+                if (letterDetsArray[y].getLetter().equals(Character.toString(input.charAt(x)))) {
+                    outputString[counter] = letterDetsArray[y].getBinary();
+                    counter++;
+                    break;
+                }
             }
         }
         return outputString;
@@ -28,11 +28,14 @@ class AlphaToBinary {
 
     private String buildString(String[] buildFromArray){
 
-        StringBuilder builder = new StringBuilder();
-        for(String s : buildFromArray) {
-            builder.append(s);
+        StringBuilder resultStr = new StringBuilder();
+        for (int i = 0; i < buildFromArray.length; i++) {
+            if (i > 0) {
+                resultStr.append(" ");
+            }
+            resultStr.append(buildFromArray[i]);
         }
-        return builder.toString();
+        return resultStr.toString();
     }
 
 
