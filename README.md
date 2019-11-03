@@ -9,7 +9,7 @@ Functions include -
 - Binary to Text
 - Text to Binary
 
-![BaseLeveller_Screenshot](/Screenshot_1.png)
+![BaseLeveller_Screenshot](/Screenshot_2.png)
 
 ## Status
 
@@ -24,6 +24,16 @@ TODO:
 # Purpose 
 
 This is a purely educational project with no underlining purpose but get practise at Java and OOP. In this project primarily consists of creating stored values and referencing them as well as some string searching via loops. First try at an independent test driven development using JUnit 5.
+
+# Constraints
+
+- Only 8 bit values - Limited to converting 0 to 255 integers
+- Only alphabetical characters & space - No numerics or punctuation 
+
+# How to Run
+
+1. Download repository. 
+2. Compile and run Main.class
 
 # Future Developments
 
