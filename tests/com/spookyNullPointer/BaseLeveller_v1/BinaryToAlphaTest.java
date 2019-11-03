@@ -87,7 +87,7 @@ class BinaryToAlphaTest {
         }
     }
 
-    @Test
+    /*@Test
     public void testCompleteStringASCII(){
         String[] completeStrings = new String[]{"this is a test string", "THIS IS A TEST STRING",
                 "ThIs Is A tEsT sTrIng", "a b c d e f g h i j k l m n o p q r s t u v w x y z", "short",
@@ -104,6 +104,6 @@ class BinaryToAlphaTest {
             BinaryToAlpha binaryToAlpha = new BinaryToAlpha(completeStrings[x]);
             assertEquals(completeStringsResults[x], binaryToAlpha.getResultASCII());
         }
-    }
+    }*/
 
 }

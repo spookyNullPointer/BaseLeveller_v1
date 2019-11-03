@@ -2,47 +2,40 @@ package com.spookyNullPointer.BaseLeveller_v1;
 
 import java.util.Scanner;
 
-public class Main {
+//TODO: TextToBinary
+//TODO: Do another Conversion Loop / Exit
 
-    //TODO: Maven Build File
-    //TODO: DecimalToBinary
-    //TODO: TextToBinary
+class Main{
 
+    //App Info
+    static final double VERSION = 1.0;
 
-    //TODO: HexToDecimal
-    //TODO: DecimalToHex
-
-    //TODO: Globalise Min / Max Values
-    //TODO: Do another Conversion Loop / Exit
-
-
-
+    //App Globals
     int numberOfMenuChoices = 4;
     Scanner userInput;
     String userInputString;
     int userInputInt;
     int incorrectInputCount = 0;
 
-    Main(){
-
+    public Main(){
         switch(getMenuInput()){
             case 1:
                 getUserInputBinary(false);
-                convertBinaryToDecimal(userInputString);
+                convertBinaryToDecimal();
                 break;
             case 2:
                 getUserInputInt();
-                convertDecimalToBinary(userInputInt);
+                convertDecimalToBinary();
                 break;
             case 3:
                 getUserInputBinary(true);
-                convertBinaryToText(userInputString);
+                convertBinaryToText();
                 break;
             case 4:
+                getUserInputText();
+                convertTextToBinary();
                 break;
-
         }
-
     }
 
     private int getMenuInput(){
@@ -53,8 +46,6 @@ public class Main {
         sysPrint("Option 2: Decimal To Binary");
         sysPrint("Option 3: Binary To Text");
         sysPrint("Option 4: Text To Binary UNAVAILABLE");
-        sysPrint("Option 5: Binary to ASCII UNAVAILABLE");
-        sysPrint("Option 6: ASCII to Binary UNAVAILABLE");
         System.out.print("Input Choice: ");
         userInput = new Scanner(System.in);
         int menuChoice = userInput.nextInt();
@@ -71,7 +62,6 @@ public class Main {
         System.out.println("Debug: Menu Input :: " + menuChoice);
         return menuChoice;
     }
-
 
     private void getUserInputBinary(boolean isForLetterBinary) {
         //System.out.println("Debug: Enter UserInputBinary");
@@ -102,6 +92,10 @@ public class Main {
         }
     }
 
+    private void getUserInputText(){
+
+    }
+
     private boolean validateInt(int min, int max, int userInputInt){
 
         boolean isValid = true;
@@ -123,6 +117,11 @@ public class Main {
         else{
             return true;
         }
+    }
+
+    private boolean validateText(){
+
+        return false;
     }
 
     private boolean validateBinary(String userInput, boolean letterBinary){
@@ -199,7 +198,7 @@ public class Main {
         sysPrint("                                       By spookyNullPointer");
     }
 
-    private void convertBinaryToDecimal(String userInputString){
+    private void convertBinaryToDecimal(){
         System.out.println("Debug: Enter BinaryToDecimal");
         BinaryToDecimal binaryToDecimal = new BinaryToDecimal(userInputString);
 
@@ -217,7 +216,7 @@ public class Main {
         }
     }
 
-    private void convertBinaryToText(String userInputString){
+    private void convertBinaryToText(){
         //TODO: Implement Space Search for Text
         //TODO: Punctuation
         BinaryToAlpha binaryToAlpha = new BinaryToAlpha(userInputString);
@@ -233,7 +232,7 @@ public class Main {
         }
     }
 
-    private void convertDecimalToBinary(int userInputInt){
+    private void convertDecimalToBinary(){
 
         if((userInputInt > 255) || (userInputInt < 0)){
             errorPrinter("minMaxIntInput");
@@ -245,6 +244,10 @@ public class Main {
         sysPrint("Binary value: " + userInputInt);
         sysPrint("Alphabetic value: " + decimalToBinary.getResult());
 
+
+    }
+
+    private void convertTextToBinary(){
 
     }
 

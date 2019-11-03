@@ -1,6 +1,6 @@
 package com.spookyNullPointer.BaseLeveller_v1;
 
-public class LetterDets {
+class LetterDets {
 
     String letter;
     String ASCII, binary;
