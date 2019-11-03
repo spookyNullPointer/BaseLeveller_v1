@@ -8,8 +8,6 @@ Functions include -
 - Decimal to Binary
 - Binary to Text
 - Text to Binary
-- Binary to ASCII Number
-- ASCII Number to Binary
 
 ![BaseLeveller_Screenshot](/Screenshot_1.png)
 
